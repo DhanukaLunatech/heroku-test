@@ -1,6 +1,6 @@
 {
   "name": "widget-app",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "private": true,
   "homepage": ".",
   "dependencies": {
@@ -9,7 +9,7 @@
     "@testing-library/user-event": "^12.1.10",
     "axios": "^0.22.0",
     "bootstrap": "^5.1.0",
-    "parcel": "^2.0.0-rc.0",
+    "parcel": "^2.6.0",
     "parcel-bundler": "^1.12.5",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -24,7 +24,7 @@
     "eject": "react-scripts eject",
     "build:widget": "parcel build src/index.js --no-source-maps --public-url ./",
     "build:widget-local": "parcel build src/index.js --no-source-maps -d docs --public-url http://localhost:8081/",
-    "build:widget-web": "parcel build src/index.js --no-source-maps -d docs --public-url https://sheltered-atoll-03432.herokuapp.com/"
+    "build:widget-web": "parcel build src/index.js --no-source-maps  --public-url https://iconfx-test-2.herokuapp.com/"
   },
   "eslintConfig": {
     "extends": [
@@ -46,5 +46,8 @@
   },
   "devDependencies": {
     "@parcel/transformer-image": "^2.0.0-rc.0"
+  },
+  "engines": {
+    "node": "16.13.2"
   }
 }
