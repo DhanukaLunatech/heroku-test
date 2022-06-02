@@ -1,0 +1,38 @@
+.btn-custom {   /* Styling for buttons inside the table */
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    height: 90%;
+    color: white;
+    font-size: 80%;
+    border-radius: 4px;
+    padding: 5px;
+  }
+  
+  .btn-sell {
+    background-color: rgb(228,77,45);
+  }
+  
+  .btn-sell:hover {
+    background-color: rgb(182, 63, 40);
+    cursor: pointer;
+  }
+  
+  .btn-sell:active {
+    background-color: rgb(128, 43, 26);
+  }
+  
+  .btn-buy {
+    background-color: rgb(53,169,71);
+  }
+  
+  .btn-buy:hover {
+    background-color: rgb(44, 141, 59);
+    cursor: pointer;
+  }
+  
+  .btn-buy:active {
+    background-color: rgb(33, 107, 44);
+  }

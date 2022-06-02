@@ -1,0 +1,222 @@
+/* ------------------------ Temporary background styling ------------------------ */
+.widget-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-x: auto;
+  padding-top: 10px;
+  padding-bottom: 15px;
+}
+
+.backdrop {
+  background-color: rgb(38, 38, 38);
+}
+
+/* ------------------- The div containing the menu and the table ----------------- */
+
+.table-menu-container {
+  width: 100%;
+  height: 100%;
+  min-width: 600px;
+  max-width: 1000px;
+  margin: auto; /* justify-content: center; will not work properly when the flex item (child) is bigger than the flex container (parent) */
+}
+
+@media screen and (max-width: 768px) {
+  .table-menu-container {
+    font-size: 8pt;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 992px) {
+  .table-menu-container {
+    font-size: 10pt;
+  }
+}
+
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+  .table-menu-container {
+    font-size: 12pt;
+  }
+}
+
+@media screen and (min-width: 1201px) {
+  .table-menu-container {
+    font-size: 14pt;
+  }
+}
+
+/* -------------------------- The menu bar above the table ----------------------- */
+.menu-bar {
+  box-sizing: border-box;
+  display: flex;
+  color: rgb(168,168,168);
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 35px;
+}
+
+.menu-bar .menu-option {
+  padding-left: 15px;
+  padding-right: 15px;
+  border: none;
+  border-bottom: 2px solid rgb(255, 255, 255, 0);
+}
+
+.menu-bar .menu-option:hover {
+  padding-left: 15px;
+  padding-right: 15px;
+  border-bottom: 2px solid rgb(168,168,168);
+  cursor: pointer;
+}
+
+.menu-bar .menu-option-selected {
+  padding-left: 15px;
+  padding-right: 15px;
+  border: none;
+  color: white;
+  border-bottom: 2px solid rgb(255, 255, 255, 1);
+}
+
+/* ------------------------------ Crypto table styling --------------------------- */
+.my-table {         /* The table */
+  /* width: 800px; */
+  width: 100%;
+  max-height: 400px; /**/
+  overflow: hidden;    
+  box-sizing: border-box;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+  background-color: rgb(60, 60, 60);
+  border-radius: 20px;
+}
+
+.my-table .table-header {  /* Table header */
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  display: flex;
+  color: rgb(160,160,160);
+  text-align: left;
+}
+
+.my-table .table-row-container {  /* Table row container */
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  max-height: 310px;
+
+  /* Hiding the scroll-bar */
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  scrollbar-width: thin;    /* for Firefox */
+  /* scrollbar-color: black #C2D2E4; */
+}
+
+/* width */
+.my-table .table-row-container::-webkit-scrollbar {
+  width: 3px;
+}
+
+/* Track */
+.my-table .table-row-container::-webkit-scrollbar-track {
+  background: #303030; 
+}
+ 
+/* Handle */
+.my-table .table-row-container::-webkit-scrollbar-thumb {
+  background: #818181;
+}
+
+/* Handle on hover */
+.my-table .table-row-container::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+/* .my-table .table-row-container::-webkit-scrollbar {
+  display: none; 
+} */
+
+.my-table .table-row {    /* Table row */
+  box-sizing: border-box;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  border: none;
+  border-bottom: 1px solid rgb(114, 114, 114, 0.5); /* Perhaps remove the opacity property */
+  color: white;
+  text-align: left;
+  filter: brightness(0.9);  /* ### Perhaps remove ### */
+  /* height: 50px; /* ----------????????????????????????????????????????????????? */
+}
+
+.my-table .table-row:hover {
+  filter: brightness(1.1);   /* ### Perhaps remove ### */
+}
+
+.my-table .table-row .coin-icon {           /* Coin icon of each table row */
+  height: 25px;
+  padding-right: 10px;
+}
+
+.my-table .table-row .flag-icon-container {        /* The container holding flag logos in the forex table */
+  width: 40%;
+  height: 100%;
+  position: relative;
+}
+
+.my-table .table-row .flag-icon-container .holder {  /* The circular div masks for the flag logos */ 
+  width: 25px;
+  height: 25px;
+  overflow: hidden;
+  /* border: solid 1px white; */
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.my-table .table-row .flag-icon-container .holder .flag-icon{   /* The flag image */   
+  margin: auto;
+  height: 25px;
+  width: auto;
+}
+
+.my-table .table-row .flag-icon-container .holder .flag-icon-na{   /* The defult flag image */   
+  margin: auto;
+  height: 25px;
+  width: 25px;
+}
+
+.my-table .table-row .coin-name-tag {   /* Coin name cell of each table row */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.my-table .table-row .coin-name-tag .coin-acronym {
+  font-size: 70%;
+  color: rgb(160,160,160);
+}
+
+.my-table .table-row .cell {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+}
+
+.my-table .table-row .button-cell {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.my-table .table-row:last-child { /* Remove bottom border of the last row */
+  border: none;
+}
